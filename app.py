@@ -12,6 +12,10 @@ from app.utils.logging_config import logger
 #Nome da Página
 st.set_page_config(page_title='CORE 1.0',page_icon=':open_file_folder:', layout="centered")
 
+# Organização do Menu Lateral (Sidebar)
+st.sidebar.image('LOGO RETEC-Photoroom.png', width=200)
+st.sidebar.header("Gerenciar Arquivos")
+
 # Configurar o locale para português (Brasil)
 locale.setlocale(locale.LC_TIME, 'pt_BR.UTF-8')
 
@@ -74,9 +78,26 @@ except ValueError:
     st.error("Data ou hora em formato inválido. Verifique os campos e tente novamente.")
     logger.info(f"Erro ao calcular as horas úteis.")
 
+# Checagem do estado e botão para criar pasta
+if st.button('Criar Pasta'):
+    if not st.session_state.get('nome_pasta'):
+        st.warning("Antes de criar a pasta, gere o nome primeiro.")
+    else:
+        nome_pasta = st.session_state['nome_pasta']
+        caminho_pasta = criar_pasta(
+            nome_pasta=nome_pasta,
+            fabrica_orc=fabrica_orc,
+            vend_orc=vend_orc,
+            seguimento_orc=seguimento_orc
+        )
+        st.session_state['caminho_pasta'] = caminho_pasta
 
-# No seu botão de Streamlit:
-if st.button("Criar Pasta"):
-    caminho_final = criar_pasta(nome_pasta, fabrica_orc, vend_orc, seguimento_orc)
+        if caminho_pasta:
+            st.success("Pasta criada com sucesso.")
+            st.write(caminho_pasta)
+            
+
+
+
 
 
