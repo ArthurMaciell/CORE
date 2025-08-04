@@ -10,7 +10,7 @@ import io
 import base64
 
 
-def processar_plan(plan,nome_orc,nome_vend,CTD,revisao,novo_arquivo,vend_orc,numero_orc,revisao_orc ):
+def processar_plan(plan, nome_orc, vend_orc, numero_orc, revisao_orc, novo_arquivo):
     # Abrindo a planilha de Cotação Distribuição
     filename2 = 'MODELO COMPOSICAO DE VALORES - DISTRIBUICAO.xlsm'
     wb2 = openpyxl.load_workbook(filename2)
