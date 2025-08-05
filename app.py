@@ -5,11 +5,7 @@ from app.services.nomeador import nomear_pasta
 from app.utils.tempo_util import calcular_horas_uteis,calcular_horas_uteis_simples
 from app.services.file_manager import criar_pasta
 from app.utils.logging_config import logger
-from app.components.sidebar_components import (
-    sidebar_distribuicao,
-    sidebar_upload_arquivos,
-    VENDEDORES_CTD
-)
+from app.components.sidebar_components import (sidebar_distribuicao, sidebar_upload_arquivos,VENDEDORES_CTD)
 from app.services.orcamento_cadastro import cadastrar_orcamento
 from datetime import datetime
 
@@ -18,7 +14,7 @@ from datetime import datetime
 st.set_page_config(page_title='CORE 1.0',page_icon=':open_file_folder:', layout="centered")
 
 # Organização do Menu Lateral (Sidebar)
-st.sidebar.image('LOGO RETEC-Photoroom.png', width=200)
+st.sidebar.image('imagens\LOGO RETEC-Photoroom.png', width=200)
 st.sidebar.header("Gerenciar Arquivos")
 
 # Configurar o locale para português (Brasil)
@@ -120,7 +116,7 @@ dias_semana = ["Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", 
 
 if st.button('Cadastrar Orçamento'):
     try:
-        path_planilha = r"C:\Users\Orçamento\ONE DRIVE ORCAMENTO\OneDrive - GRUPO RETEC\02. Engenharia\Dep. Orçamentos\CORE\Cadastro Orçamento PYTHON - Copia.xlsx"
+        path_planilha = r"C:\Users\Orçamento\ONE DRIVE ORCAMENTO\OneDrive - GRUPO RETEC\02. Engenharia\Dep. Orçamentos\CADASTRO ORÇAMENTO RETEC\CORE\data\Cadastro Orçamento PYTHON.xlsx"
         
         date_datetime_ini = datetime.strptime(data_orc_ini, "%d/%m/%Y")
         date_datetime_conc = datetime.strptime(data_orc_conc, "%d/%m/%Y")
