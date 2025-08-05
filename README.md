@@ -96,8 +96,8 @@ core-orcamentos/
 
 ## 📢 Próximos Passos
 
-- ** Integração com Supabase (registro automático em banco SQL)**
-- ** Histórico completo de orçamentos cadastrados** 
+- **Integração com Supabase ,registro automático em banco SQL**
+- **Histórico completo de orçamentos cadastrados** 
 - **Versão com login e permissões** 
 
 ---
