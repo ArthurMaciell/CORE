@@ -116,7 +116,7 @@ dias_semana = ["Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", 
 
 if st.button('Cadastrar Orçamento'):
     try:
-        path_planilha = r"C:\Users\Orçamento\ONE DRIVE ORCAMENTO\OneDrive - GRUPO RETEC\02. Engenharia\Dep. Orçamentos\CADASTRO ORÇAMENTO RETEC\CORE\data\Cadastro Orçamento PYTHON.xlsx"
+        path_planilha = r"data\cadastro\Cadastro Orçamento PYTHON.xlsx"
         
         date_datetime_ini = datetime.strptime(data_orc_ini, "%d/%m/%Y")
         date_datetime_conc = datetime.strptime(data_orc_conc, "%d/%m/%Y")
