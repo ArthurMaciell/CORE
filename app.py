@@ -7,6 +7,7 @@ from app.services.file_manager import criar_pasta
 from app.utils.logging_config import logger
 from app.components.sidebar_components import (sidebar_distribuicao, sidebar_upload_arquivos,VENDEDORES_CTD)
 from app.services.orcamento_cadastro import cadastrar_orcamento
+from app.services.planilha_negoc import plan_neg
 from datetime import datetime
 
 
@@ -59,6 +60,8 @@ tamanho_orc = st.selectbox("Qual é o Tamanho do orçamento?",["Pequeno","Médio
 data_orc_ini = data_orc_ini.strftime('%d/%m/%Y')
 hora_atual_plan = datetime.now().strftime('%H:%M')
 data_orc_conc = datetime.today().strftime("%d/%m/%Y")
+
+plan_neg(cliente_orc)
 
 # Geração dos nomes
 if st.button("Gerar nome da pasta"):
