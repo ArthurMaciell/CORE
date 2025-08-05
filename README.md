@@ -5,7 +5,6 @@
 ![Streamlit](https://img.shields.io/badge/Framework-Streamlit-ff4b4b)
 ![Status](https://img.shields.io/badge/status-Em%20desenvolvimento-yellow)
 
-> Sistema web desenvolvido para automatizar o processo de cadastro de orçamentos, geração de pastas, processamento de planilhas e extração de dados com Regex.
 
 ---
 
@@ -41,5 +40,5 @@ Com ele, é possível:
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seuusuario/core-orcamentos.git
+git clone https://github.com/ArthurMaciell/CORE.git
 cd core-orcamentos
