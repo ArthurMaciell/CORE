@@ -30,19 +30,19 @@ obra_orc = st.text_input('Nome da Obra')
 local_obra = st.text_input('Local da Obra (CIDADE/UF)') 
 frete_orc = st.selectbox('Qual é o Tipo de frete?',['FOB','CIF'])
 tipo_orc = st.selectbox('Qual é o Tipo de Orçamento? ',['Concorrência', 'Compra','Consulta','Pedido de Compra']) 
-vend_orc = st.selectbox("Qual é o Vendedor?",["Gabriel Bento","Bruno Crispim", "Iago Rangel","Luan Araujo","Marlon Souza","Rutemar Junior", "Wellisson Chaves"])
+vend_orc = st.selectbox("Qual é o Vendedor?",["Gabriel Bento","Bruno Crispim", "Iago Rangel","Luan Araujo","Larissa Sousa","Rutemar Junior", "Wellisson Chaves"])
 data_orc_ini = st.date_input('Data de Inicio (D/M/A)')
 hora_orc_ini = st.text_input('Horário de Inicio (HH:MM)')
 #data_orc_conc = st.text_input('Data de Conclusão(D/M/A)')
 revisao_orc = st.text_input('Qual é o número/letra da revisão?')
 if vend_orc in ["Gabriel Bento","Bruno Crispim"]:
     fator_orc = st.text_input('Qual é o Fator do orçamento?')
-elif vend_orc in ["Iago Rangel","Luan Araujo","Marlon Souza","Rutemar Junior", "Wellisson Chaves"]:
+elif vend_orc in ["Iago Rangel","Luan Araujo","Larissa Sousa","Rutemar Junior", "Wellisson Chaves"]:
     fator_orc = '1'
 valor_orc = st.number_input('Qual é o Valor do Orçamento? (DIGITE O PREÇO, NÃO COLOQUE PONTO, USE VÍRGULA) ')
 
 #Organização para ver se vai ser por Representação ou Distribuição
-if vend_orc in ["Iago Rangel","Luan Araujo","Marlon Souza","Rutemar Junior", "Wellisson Chaves"]:
+if vend_orc in ["Iago Rangel","Luan Araujo","Larissa Sousa","Rutemar Junior", "Wellisson Chaves"]:
     fabrica_orc = st.selectbox("Qual é a Fábrica Distribuição?",["TROX ACESSORIO","TROX EQUIPAMENTO", "IMI","ARMACELL","PENNSE","DAIKIN", "SCIFLUX", 'OUTROS'])
     seguimento_orc = "Distribuição"
 
