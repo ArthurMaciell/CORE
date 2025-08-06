@@ -66,7 +66,7 @@ plan_neg(cliente_orc)
 # Geração dos nomes
 if st.button("Gerar nome da pasta"):
     nome_pasta, nome_arquivo = nomear_pasta(
-        vend_orc, fabrica_orc, numero_orc, cliente_orc, obra_orc, data_orc_conc, revisao_orc, seguimento_orc
+        vend_orc, fabrica_orc, numero_orc, cliente_orc, obra_orc, data_orc_conc, revisao_orc, seguimento_orc,nome_orc
     )
     st.session_state['nome_pasta'] = nome_pasta
     st.session_state['nome_arquivo'] = nome_arquivo

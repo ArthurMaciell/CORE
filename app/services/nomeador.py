@@ -3,7 +3,7 @@ from app.utils.logging_config import logger
 
 
 
-def nomear_pasta(vend_orc, fabrica_orc, numero_orc, cliente_orc, obra_orc, data_orc_conc, revisao_orc, seguimento_orc):
+def nomear_pasta(vend_orc, fabrica_orc, numero_orc, cliente_orc, obra_orc, data_orc_conc, revisao_orc, seguimento_orc,nome_orc):
     if fabrica_orc == 'TROX EQUIPAMENTO':
         codigo_orc = 'NCT-X'
     elif fabrica_orc == 'TROX ACESSORIO':
@@ -73,7 +73,7 @@ def nomear_pasta(vend_orc, fabrica_orc, numero_orc, cliente_orc, obra_orc, data_
     if revisao_orc != '0':
         nome_pasta = codigo_orc + ' ' + numero_orc  + '-25' +'- REV'+ revisao_orc + ' - ' + cliente_orc + ' - ' + obra_orc + ' - ' + data_formatada + ' - ' + vend_orc
     
-    logger.info(f"Gerando nome para orçamento: N°={numero_orc}, fábrica={fabrica_orc}, cliente={cliente_orc}")
+    logger.info(f"Gerando nome para orçamento: N°={numero_orc}, fábrica={fabrica_orc}, cliente={cliente_orc},orçamentista={nome_orc}")
     #st.write(nome_pasta)
     #st.write(fabrica_orc)
     return(nome_pasta, nome_arquivo)
