@@ -5,7 +5,7 @@ import openpyxl
 from app.services.spreadsheet_manager import processar_plan
 
 
-VENDEDORES_CTD = ["Iago Rangel", "Luan Araujo", "Marlon Souza", "Rutemar Junior", "Wellisson Chaves"]
+VENDEDORES_CTD = ["Iago Rangel", "Luan Araujo", "Marlon Souza", "Rutemar Junior", "Wellisson Chaves",'Larissa Sousa']
 
 
 def sidebar_distribuicao(caminho_pasta, vend_orc, nome_orc, numero_orc, revisao_orc):

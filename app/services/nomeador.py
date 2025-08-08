@@ -60,6 +60,9 @@ def nomear_pasta(vend_orc, fabrica_orc, numero_orc, cliente_orc, obra_orc, data_
         
     elif vend_orc == 'Wellisson Chaves':
         vend_orc = 'WC'
+    
+    elif vend_orc == 'Larissa Sousa':
+        vend_orc = 'LS'
 
 
     #Nomeando os arquivos da Distribuição

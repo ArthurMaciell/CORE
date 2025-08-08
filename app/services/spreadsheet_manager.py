@@ -12,7 +12,8 @@ import base64
 
 def processar_plan(plan, nome_orc, vend_orc, numero_orc, revisao_orc, novo_arquivo):
     # Abrindo a planilha de Cotação Distribuição
-    filename2 = "data\modelos\MODELO COMPOSICAO DE VALORES - DISTRIBUICAO.xlsm"
+    filename2 = "data\modelos\MODELO COMPOSICAO DE VALORES - DISTRIBUICAO 03.2025.xlsm"
+    
     wb2 = openpyxl.load_workbook(filename2)
     ws2 = wb2.active
     
