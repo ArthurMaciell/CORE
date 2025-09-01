@@ -9,16 +9,17 @@ from app.components.sidebar_components import (sidebar_distribuicao, sidebar_upl
 from app.services.orcamento_cadastro import cadastrar_orcamento
 from app.services.planilha_negoc import plan_neg
 from datetime import datetime
+import shutil
 
 
 #Nome da Página
 st.set_page_config(page_title='CORE 1.0',page_icon=':open_file_folder:', layout="centered")
 
 # Organização do Menu Lateral (Sidebar)
-st.sidebar.image('imagens\LOGO RETEC-Photoroom.png', width=200)
+st.sidebar.image(r'C:\Users\Orçamento\ONE DRIVE ORCAMENTO\OneDrive - GRUPO RETEC\02. Engenharia\Dep. Orçamentos\CADASTRO ORÇAMENTO RETEC\CORE\imagens\LOGO RETEC-Photoroom.png', width=200)
 st.sidebar.header("Gerenciar Arquivos")
 
-# Configurar o locale para português (Brasil)
+# Configurar o locale para português (Brasil)S
 locale.setlocale(locale.LC_TIME, 'pt_BR.UTF-8')
 
 #Input Usuário
@@ -119,8 +120,8 @@ dias_semana = ["Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", 
 
 if st.button('Cadastrar Orçamento'):
     try:
-        path_planilha = r"data\cadastro\Cadastro Orçamento PYTHON.xlsx"
-        
+        path_planilha = r"C:\Users\Orçamento\ONE DRIVE ORCAMENTO\OneDrive - GRUPO RETEC\02. Engenharia\Dep. Orçamentos\CADASTRO ORÇAMENTO RETEC\CORE\data\cadastro\Cadastro Orçamento PYTHON.xlsx"
+        path_backup = r"C:\Users\Orçamento\ONE DRIVE ORCAMENTO\OneDrive - GRUPO RETEC\02. Engenharia\Dep. Orçamentos\CADASTRO ORÇAMENTO RETEC\CORE\data\cadastro\Cadastro Orçamento PYTHON - Backup.xlsx"
         date_datetime_ini = datetime.strptime(data_orc_ini, "%d/%m/%Y")
         date_datetime_conc = datetime.strptime(data_orc_conc, "%d/%m/%Y")
 
@@ -152,11 +153,14 @@ if st.button('Cadastrar Orçamento'):
         }
 
         sucesso, resultado = cadastrar_orcamento(path_planilha, dados)
+        shutil.copy(path_planilha, path_backup)
+        
 
         if sucesso:
             st.success("Cadastro realizado com sucesso!")
             st.write(f"Esse é o orçamento número: {resultado}")
             st.balloons()
+            
         else:
             st.error(f"Erro ao cadastrar: {resultado}")
 
