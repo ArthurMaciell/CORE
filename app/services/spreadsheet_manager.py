@@ -12,7 +12,7 @@ import base64
 
 def processar_plan(plan, nome_orc, vend_orc, numero_orc, revisao_orc, novo_arquivo):
     # Abrindo a planilha de Cotação Distribuição
-    filename2 = r"C:\Users\Orçamento\ONE DRIVE ORCAMENTO\OneDrive - GRUPO RETEC\02. Engenharia\Dep. Orçamentos\CADASTRO ORÇAMENTO RETEC\CORE\data\modelos\MODELO COMPOSICAO DE VALORES - DISTRIBUIÇÃO 03.2025.xlsm"
+    filename2 = r"C:\Users\Orçamento\ONE DRIVE ORCAMENTO\OneDrive - GRUPO RETEC\02. Engenharia\Dep. Orçamentos\CADASTRO ORÇAMENTO RETEC\CORE\data\modelos\MODELO COMPOSICAO DE VALORES - DISTRIBUIÇÃO 09.2025.xlsm"
     
     wb2 = openpyxl.load_workbook(filename2)
     ws2 = wb2.active
